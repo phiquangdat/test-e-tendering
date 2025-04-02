@@ -1,7 +1,7 @@
 /**
  * CityPage Component
  * A memoized component that renders a dashboard interface for managing city-related actions.
- * Includes buttons for various functionalities such as creating tenders, managing categories, 
+ * Includes buttons for various functionalities such as creating tenders, managing categories,
  * viewing feedbacks, deciding winners, and more.
  *
  * @param {Object} user - The user object containing user information.
@@ -11,9 +11,6 @@
 import React, { memo } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import CreateAdmin from "../CreateAdmin/CreateAdmin";
-import CreateCityAdmin from "../CreateCityAdmin/CreateCityAdmin";
-import CreateCityUser from "./CreateCityUser";
 
 // Configuration for buttons displayed on the dashboard.
 const BUTTON_CONFIG = [

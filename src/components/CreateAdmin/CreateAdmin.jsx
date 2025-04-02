@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
 
-export default function CreateAdmin({ onSuccess }) {
+export default function CreateAdmin({}) {
   const API_URL = "http://localhost:5500";
   const navigate = useNavigate();
   const [newUser, setNewUser] = useState({
@@ -62,7 +62,6 @@ export default function CreateAdmin({ onSuccess }) {
         email: "",
         user_type: "City",
       });
-      onSuccess(response.data.user); // Pass the created user to the parent component
     } catch (error) {
       console.error("Error creating City User:", error);
       setError(error.response?.data?.message || "Failed to create City User");

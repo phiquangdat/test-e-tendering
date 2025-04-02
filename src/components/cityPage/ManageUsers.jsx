@@ -39,6 +39,7 @@ const ManageUsers = memo(() => {
     setLoading(true);
     try {
       await axios.delete(`${API_URL}/delete_user/${userId}`);
+      console.log(`User ${userId} deleted sucessfully`);
       setUsers(users.filter((user) => user.user_id !== userId));
       setError(null);
     } catch (err) {

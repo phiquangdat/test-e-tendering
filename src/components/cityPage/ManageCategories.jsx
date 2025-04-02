@@ -75,6 +75,7 @@ export default function ManageCategories() {
   const handleDeleteCategory = async (categoryId) => {
     try {
       await axios.delete(`${API_URL}/delete_category/${categoryId}`); // API call to delete category
+      console.log(`Deleted ${categoryId} successfully`);
       setCategories((prev) =>
         prev.filter((category) => category.category_id !== categoryId)
       ); // Remove deleted category from state

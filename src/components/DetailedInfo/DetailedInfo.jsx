@@ -25,6 +25,7 @@ export default function DetailedTenderInfo({
         axios
           .delete(`${API_URL}/delete_tender/${tender.tender_id}`)
           .then(async () => {
+            console.log("Tender deleted successfully:");
             await fetchTenders();
             navigate("/");
           })
